@@ -1,4 +1,4 @@
-package org.example.maven_tutorial;
+package org.example.module_3.lesson1;
 
 public class Tiger extends Animal {
 
