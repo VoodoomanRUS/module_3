@@ -25,5 +25,7 @@ public class Lesson3 {
                 log.trace(String.valueOf(j));
             }
         }
+
+     
     }
 }
