@@ -3,9 +3,9 @@ package maven_tutorial.unit;
 import org.example.module_3.lesson3.CarFactory;
 import org.example.module_3.lesson3.Wheel;
 import org.example.module_3.lesson3.Worker;
-import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import org.mockito.Mockito;
 
 public class CarFactoryTest {
@@ -18,7 +18,7 @@ public class CarFactoryTest {
         CarFactory carFactory = new CarFactory(workerMock);
         boolean actual = carFactory.createCar();
         boolean expected = true;
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class CarFactoryTest {
         CarFactory carFactory = new CarFactory(workerMock);
         boolean actual = carFactory.createCar();
         boolean expected = false;
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class CarFactoryTest {
         CarFactory carFactory = new CarFactory(workerMock);
         Wheel actual = carFactory.createWheel(17);
 
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
 }

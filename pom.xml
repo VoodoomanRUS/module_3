@@ -28,6 +28,7 @@
             <version>2.13.3</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -68,13 +69,6 @@
             <version>1.2.3</version>
             <scope>runtime</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>jdbc</artifactId>
-            <version>1.16.3</version>
-            <scope>runtime</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -99,40 +93,22 @@
             </plugin>
         </plugins>
     </build>
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            <id>Yuri</id>-->
-<!--            <build>-->
-<!--                <finalName>yuri-app</finalName>-->
-<!--            </build>-->
-<!--        </profile>-->
-<!--        <profile>-->
-<!--            &lt;!&ndash;Имя профиля&ndash;&gt;-->
-<!--            <id>Petr</id>-->
-<!--            &lt;!&ndash;Сборка&ndash;&gt;-->
-<!--            <build>-->
-<!--                &lt;!&ndash;Имя файла после сборки&ndash;&gt;-->
-<!--                <finalName>petr-app</finalName>-->
-<!--                <plugins>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-clean-plugin</artifactId>-->
-<!--                        <version>3.2.0</version>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <phase>clean</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>clean</goal>-->
-<!--                                </goals>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-<!--                </plugins>-->
-<!--            </build>-->
 
-<!--        </profile>-->
-<!--    </profiles>-->
-
-
-
+    <profiles>
+        <profile>
+            <id>Yuri</id>
+            <build>
+                <finalName>yuri-app</finalName>
+            </build>
+        </profile>
+        <profile>
+            <!--Имя профиля-->
+            <id>Petr</id>
+            <!--Сборка-->
+            <build>
+                <!--Имя файла после сборки-->
+                <finalName>petr-app</finalName>
+            </build>
+        </profile>
+    </profiles>
 </project>
